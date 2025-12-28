@@ -4,28 +4,30 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "PLEIONES | Management de projets complexes • Agile • ERP • PMP",
+  title: {
+    default: "PLEIONES | Management de projets complexes – PMP® & PMI-ACP®",
+    template: "%s | PLEIONES",
+  },
   description:
-    "PLEIONES est un cabinet de conseil en management de projets complexes, transformation digitale, ERP et accompagnement aux certifications PMI (PMP®, PMI-ACP®, Agile & Scrum) en Côte d’Ivoire et en Afrique de l’Ouest.",
+    "PLEIONES est un cabinet de management de projets complexes, digitalisation et accompagnement aux certifications internationales PMP®, PMI-ACP®, Agile & Scrum en Afrique de l’Ouest.",
   keywords: [
-    "management de projets",
-    "projets complexes",
-    "PMP Côte d’Ivoire",
+    "management de projets complexes",
+    "cabinet PMP",
     "PMI-ACP",
-    "Agile Scrum Afrique",
+    "consultant projets IT Afrique",
+    "PMO Afrique de l’Ouest",
     "ERP Afrique",
-    "cabinet de conseil IT",
-    "transformation digitale",
-    "PMO Afrique",
-    "PLEIONES",
+    "certification PMP Côte d’Ivoire",
+    "Agile Scrum Afrique",
   ],
-  authors: [{ name: "Coach Serge N'GUE" }],
+  authors: [{ name: "PLEIONES – Coach Serge N'GUE" }],
   creator: "PLEIONES",
   metadataBase: new URL("https://pleiones-site.vercel.app"),
   openGraph: {
-    title: "PLEIONES | Management de projets complexes",
+    title: "PLEIONES – Management de projets complexes | PMP® & PMI-ACP®",
     description:
-      "Cabinet de conseil en management de projets complexes, Agile, ERP et certifications PMI en Afrique.",
+      "Cabinet spécialisé en projets complexes, transformation digitale, ERP et certifications PMP® & PMI-ACP® en Afrique.",
+    url: "https://pleiones-site.vercel.app",
     siteName: "PLEIONES",
     locale: "fr_FR",
     type: "website",
@@ -39,7 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className="bg-slate-50 text-slate-900">
+      <body className="min-h-screen bg-slate-50 text-slate-900">
         <Header />
         {children}
         <Footer />
