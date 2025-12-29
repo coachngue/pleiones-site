@@ -5,33 +5,24 @@ import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "PLEIONES | Management de projets complexes – PMP® & PMI-ACP®",
+    default: "PLEIONES | Management de projets complexes",
     template: "%s | PLEIONES",
   },
   description:
-    "PLEIONES est un cabinet de management de projets complexes, digitalisation et accompagnement aux certifications internationales PMP®, PMI-ACP®, Agile & Scrum en Afrique de l’Ouest.",
+    "PLEIONES est un cabinet de management de projets complexes, digitalisation, ERP et accompagnement aux certifications internationales PMP® et PMI-ACP® en Afrique.",
   keywords: [
-    "management de projets complexes",
-    "cabinet PMP",
+    "management de projets",
+    "projets complexes",
+    "PMP",
     "PMI-ACP",
-    "consultant projets IT Afrique",
-    "PMO Afrique de l’Ouest",
-    "ERP Afrique",
-    "certification PMP Côte d’Ivoire",
-    "Agile Scrum Afrique",
+    "Agile",
+    "Scrum",
+    "ERP",
+    "cabinet conseil Afrique",
   ],
-  authors: [{ name: "PLEIONES – Coach Serge N'GUE" }],
+  authors: [{ name: "Coach Serge N’GUE" }],
   creator: "PLEIONES",
-  metadataBase: new URL("https://pleiones-site.vercel.app"),
-  openGraph: {
-    title: "PLEIONES – Management de projets complexes | PMP® & PMI-ACP®",
-    description:
-      "Cabinet spécialisé en projets complexes, transformation digitale, ERP et certifications PMP® & PMI-ACP® en Afrique.",
-    url: "https://pleiones-site.vercel.app",
-    siteName: "PLEIONES",
-    locale: "fr_FR",
-    type: "website",
-  },
+  metadataBase: new URL("https://pleionesafrica.com"),
 };
 
 export default function RootLayout({
@@ -41,9 +32,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className="min-h-screen bg-slate-50 text-slate-900">
+      <head>
+        {/* SEO international */}
+        <link
+          rel="alternate"
+          href="https://pleionesafrica.com"
+          hrefLang="fr"
+        />
+        <link
+          rel="alternate"
+          href="https://pleionesafrica.com/en"
+          hrefLang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://pleionesafrica.com"
+          hrefLang="x-default"
+        />
+      </head>
+
+      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans">
         <Header />
-        {children}
+
+        <main className="flex-grow">{children}</main>
+
         <Footer />
       </body>
     </html>

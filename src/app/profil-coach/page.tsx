@@ -9,7 +9,7 @@ export default function ProfilCoach() {
             Coach Serge N’GUE
           </h1>
           <p className="text-lg md:text-xl text-slate-200">
-            Expert en management de projets complexes • PMP® • PMI-ACP®
+            Expert senior en management de projets complexes • PMP® • PMI-ACP®
           </p>
         </div>
       </section>
@@ -17,67 +17,91 @@ export default function ProfilCoach() {
       {/* PROFIL */}
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 space-y-10">
-
           <p className="text-lg leading-relaxed text-slate-700">
             Coach Serge N’GUE est un expert senior en management de projets
-            complexes, transformation digitale et gouvernance des projets IT.
-            Il cumule plus de <strong>20 années d’expérience</strong> dans la
-            conduite de projets stratégiques en Afrique de l’Ouest, avec une
-            forte exposition aux environnements internationaux.
+            complexes, transformation digitale et gouvernance IT, avec plus de
+            <strong> 20 années d’expérience professionnelle</strong> dans la
+            conduite de projets à fort impact en Afrique de l’Ouest et dans des
+            environnements multiculturels.
           </p>
 
           <p className="text-lg leading-relaxed text-slate-700">
-            Il accompagne des directions générales, des DSI, des cabinets de
-            conseil et des institutions dans la structuration de leurs projets,
-            l’implémentation de standards PMI®, ainsi que dans la montée en
-            compétence des chefs de projets et managers.
+            Il accompagne les dirigeants, DSI, cabinets de conseil et institutions
+            publiques dans la mise en place de cadres de gouvernance projet,
+            l’adoption des standards PMI®, et le développement de chefs de projets
+            et d’équipes agiles à haute performance.
           </p>
-
         </div>
       </section>
 
       {/* CERTIFICATIONS */}
       <section className="py-20 bg-slate-100">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-10 text-center">
-            Certifications internationales
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-12">
+            Certifications internationales (PMI®)
           </h2>
 
-          <ul className="grid md:grid-cols-2 gap-6 text-lg">
-            <li className="bg-white p-6 rounded-2xl border">
-              ✔️ PMP® – Project Management Professional (PMI)
-            </li>
-            <li className="bg-white p-6 rounded-2xl border">
-              ✔️ PMI-ACP® – Agile Certified Practitioner (PMI)
-            </li>
-            <li className="bg-white p-6 rounded-2xl border">
-              ✔️ Scrum & pratiques Agile avancées
-            </li>
-            <li className="bg-white p-6 rounded-2xl border">
-              ✔️ ERP & transformation digitale (Sage, Odoo, SAP)
-            </li>
-          </ul>
+          <div className="flex flex-wrap justify-center gap-12">
+
+            {/* PMP */}
+            <a
+              href="https://www.credly.com/badges/b9398df3-949d-466b-9764-da8a571bc4f6"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Certification PMP sur Credly"
+              className="hover:scale-105 transition"
+            >
+              <img
+                src="/badges/pmp.png"
+                alt="Project Management Professional (PMP®) - PMI"
+                width={180}
+                height={180}
+                className="rounded-xl shadow-lg"
+              />
+            </a>
+
+            {/* PMI-ACP */}
+            <a
+              href="https://www.credly.com/badges/389ce8a0-9879-4bdf-9d0f-96edfd5e03b7"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Certification PMI-ACP sur Credly"
+              className="hover:scale-105 transition"
+            >
+              <img
+                src="/badges/pmi-acp.png"
+                alt="PMI Agile Certified Practitioner (PMI-ACP®)"
+                width={180}
+                height={180}
+                className="rounded-xl shadow-lg"
+              />
+            </a>
+
+          </div>
+
+          <p className="mt-10 text-slate-600 text-sm">
+            Badges officiels délivrés par le Project Management Institute (PMI®) – vérifiables sur Credly
+          </p>
         </div>
       </section>
 
-      {/* EXPERIENCE */}
+      {/* POSITIONNEMENT */}
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 space-y-8">
           <h2 className="text-3xl font-bold text-center">
-            Expérience & positionnement
+            Positionnement & crédibilité internationale
           </h2>
 
           <p className="text-lg text-slate-700 leading-relaxed">
-            Coach Serge N’GUE est intervenu sur des projets à forts enjeux,
-            impliquant plusieurs parties prenantes, des budgets significatifs
-            et des environnements multiculturels. Son approche est orientée
-            résultats, gouvernance et transfert de compétences.
+            Coach Serge N’GUE intervient sur des projets complexes à forts enjeux,
+            impliquant des budgets significatifs, des transformations
+            organisationnelles et des environnements multi-acteurs.
           </p>
 
           <p className="text-lg text-slate-700 leading-relaxed">
-            Il est aujourd’hui reconnu pour sa capacité à faire le lien entre
-            les standards internationaux (PMI®, Agile, PMO) et les réalités
-            opérationnelles africaines.
+            Il est reconnu pour sa capacité à combiner les meilleures pratiques
+            internationales (PMI®, Agile, PMO) avec les réalités opérationnelles
+            africaines, garantissant des résultats mesurables et durables.
           </p>
         </div>
       </section>
@@ -85,12 +109,11 @@ export default function ProfilCoach() {
       {/* CTA */}
       <section className="py-24 bg-gradient-to-r from-slate-800 to-slate-900 text-white text-center">
         <h2 className="text-3xl font-bold mb-6">
-          Échanger avec le coach
+          Discutons de vos projets
         </h2>
 
         <p className="mb-10 text-lg text-slate-200">
-          Discutons de vos projets, de votre organisation ou de votre parcours
-          de certification.
+          Gouvernance projet • Transformation agile • Certifications PMP® & PMI-ACP®
         </p>
 
         <a
@@ -105,11 +128,10 @@ export default function ProfilCoach() {
 
       {/* SEO */}
       <section className="hidden">
-        <h2>Coach PMP et PMI-ACP en Afrique</h2>
+        <h2>Coach certifié PMP et PMI-ACP en Afrique</h2>
         <p>
-          Coach Serge N’GUE est un expert certifié PMP® et PMI-ACP® spécialisé
-          dans le management de projets complexes, la transformation digitale
-          et la gouvernance des projets en Afrique de l’Ouest.
+          Coach Serge N’GUE est un expert certifié PMP® et PMI-ACP® spécialisé en
+          management de projets complexes, gouvernance projet et agilité en Afrique.
         </p>
       </section>
 

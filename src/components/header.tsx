@@ -14,31 +14,24 @@ export default function Header() {
     }`;
 
   return (
-    <header className="bg-slate-900 sticky top-0 z-50 shadow-sm">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <header className="bg-slate-900 text-white sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+        
+        {/* Brand */}
+        <div>
+          <div className="font-bold text-lg">PLEIONES</div>
+          <div className="text-xs text-slate-300">
+            PMP® • PMI-ACP® • Agile • ERP
+          </div>
+        </div>
 
-        {/* LOGO */}
-        <Link href="/" className="font-bold text-lg text-white">
-          PLEIONES
-        </Link>
-
-        {/* NAVIGATION */}
-        <nav className="flex items-center gap-4 text-slate-300">
-          <Link href="/" className={linkClass("/")}>
-            Accueil
-          </Link>
-
-          <span className="opacity-40">|</span>
-
+        {/* Navigation */}
+        <nav className="flex gap-6">
+          <Link href="/" className={linkClass("/")}>Accueil</Link>
           <Link href="/profil-coach" className={linkClass("/profil-coach")}>
             Profil du coach
           </Link>
-
-          <span className="opacity-40">|</span>
-
-          <Link href="/contact" className={linkClass("/contact")}>
-            Contact
-          </Link>
+          <Link href="/contact" className={linkClass("/contact")}>Contact</Link>
         </nav>
 
       </div>
