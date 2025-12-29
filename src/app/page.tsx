@@ -31,8 +31,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* BADGES CERTIFICATIONS */}
+      <section className="bg-white py-14">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-sm uppercase tracking-widest text-slate-500 mb-8">
+            Certifications internationales reconnues
+          </p>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+            <div className="flex flex-col items-center">
+              <img
+                src="/badges/pmp.png"
+                alt="PMP® – Project Management Professional"
+                className="h-40 w-auto"
+              />
+              <p className="mt-4 font-semibold text-slate-700">
+                PMP® – Project Management Professional
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <img
+                src="/badges/pmi-acp.png"
+                alt="PMI-ACP® – Agile Certified Practitioner"
+                className="h-40 w-auto"
+              />
+              <p className="mt-4 font-semibold text-slate-700">
+                PMI-ACP® – Agile Certified Practitioner
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SEPARATEUR */}
-      <div className="h-16 bg-gradient-to-b from-slate-700 to-white"></div>
+      <div className="h-16 bg-gradient-to-b from-white to-slate-100"></div>
 
       {/* A PROPOS */}
       <section className="py-24 bg-white">
@@ -51,15 +84,12 @@ export default function Home() {
             <ul className="space-y-4 text-lg">
               <li>✔️ +20 ans d’expérience projets IT</li>
               <li>✔️ Projets complexes & ERP (Sage, Odoo, SAP)</li>
-              <li>✔️ Budgets gérés jusqu’à plus d’un million de dollars</li>
-              <li>✔️ Coaching & formations certifiantes PMI</li>
+              <li>✔️ Budgets gérés jusqu’à plusieurs centaines de milliers d’euros</li>
+              <li>✔️ Coaching & formations certifiantes PMI®</li>
             </ul>
           </div>
         </div>
       </section>
-
-      {/* SEPARATEUR */}
-      <div className="h-12 bg-slate-100"></div>
 
       {/* POURQUOI NOUS CHOISIR */}
       <section className="py-24 bg-slate-100">
@@ -71,8 +101,8 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-6">
             {[
               "Expertise terrain",
-              "Standards internationaux",
-              "Contexte africain",
+              "Standards internationaux PMI®",
+              "Contexte africain maîtrisé",
               "Résultats mesurables",
             ].map((item) => (
               <div
@@ -85,9 +115,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* SEPARATEUR */}
-      <div className="h-12 bg-white"></div>
 
       {/* MISSIONS */}
       <section className="py-24 bg-white">
@@ -132,6 +159,7 @@ export default function Home() {
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           Diagnostic gratuit
         </h2>
+
         <p className="mb-10 text-lg text-slate-200">
           Discutons de votre projet ou de votre parcours de certification.
         </p>
@@ -146,18 +174,14 @@ export default function Home() {
           Prendre rendez-vous sur WhatsApp
         </a>
       </section>
-      {/* SEO TEXTE – invisible utilisateur, lisible Google */}
+
+      {/* SEO TEXTE */}
       <section className="hidden">
         <h2>Cabinet de management de projets complexes en Afrique</h2>
         <p>
           PLEIONES est un cabinet de conseil spécialisé en management de projets
           complexes, transformation digitale, ERP et accompagnement aux
           certifications internationales PMI (PMP®, PMI-ACP®, Agile & Scrum).
-        </p>
-        <p>
-          Nous accompagnons les entreprises, institutions et professionnels en
-          Afrique de l’Ouest, notamment en Côte d’Ivoire, dans la réussite de
-          leurs projets IT et organisationnels.
         </p>
       </section>
 
