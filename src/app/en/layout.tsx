@@ -1,23 +1,17 @@
-import type { Metadata } from "next";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import type { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "PLEIONES Africa – Complex Project Management & Certifications",
+export const metadata = {
+  title: "PLEIONES – Project Management & Agile Expertise in Africa",
   description:
-    "PLEIONES Africa supports organizations and professionals in complex project management, digital transformation, and PMI certifications (PMP®, PMI-ACP®).",
+    "PLEIONES supports organizations and professionals in complex project management, digital transformation, and PMI certifications across Africa.",
 };
 
-export default function EnglishLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function EnLayout({ children }: { children: ReactNode }) {
   return (
-    <>
-      <Header lang="en" />
-      {children}
-      <Footer lang="en" />
-    </>
+    <html lang="en">
+      <body className="bg-slate-50 text-slate-900 font-sans">
+        {children}
+      </body>
+    </html>
   );
 }
