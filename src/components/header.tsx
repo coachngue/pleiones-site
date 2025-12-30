@@ -5,34 +5,50 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
+  const isEN = pathname.startsWith("/en");
 
-  const linkClass = (path: string) =>
-    `font-medium transition ${
-      pathname === path
-        ? "text-white underline"
-        : "text-slate-200 hover:text-white"
-    }`;
+  const base = isEN ? "/en" : "";
 
   return (
-    <header className="bg-slate-900 text-white sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-        
-        {/* Brand */}
-        <div>
-          <div className="font-bold text-lg">PLEIONES</div>
-          <div className="text-xs text-slate-300">
-            PMP® • PMI-ACP® • Agile • ERP
-          </div>
-        </div>
+    <header className="bg-white border-b">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        {/* Navigation */}
-        <nav className="flex gap-6">
-          <Link href="/" className={linkClass("/")}>Accueil</Link>
-          <Link href="/profil-coach" className={linkClass("/profil-coach")}>
-            Profil du coach
+        {/* LOGO */}
+        <Link href={`${base}/`} className="text-xl font-bold text-slate-900">
+          PLEIONES
+        </Link>
+
+        {/* NAVIGATION */}
+        <nav className="flex gap-6 text-slate-700 font-medium">
+          <Link href={`${base}/`} className="hover:text-slate-900">
+            {isEN ? "Home" : "Accueil"}
           </Link>
-          <Link href="/contact" className={linkClass("/contact")}>Contact</Link>
+
+          <Link href={`${base}/profil-coach`} className="hover:text-slate-900">
+            {isEN ? "Coach Profile" : "Profil du coach"}
+          </Link>
+
+          <Link href={`${base}/services`} className="hover:text-slate-900">
+            {isEN ? "Services" : "Services"}
+          </Link>
+
+          <Link href={`${base}/contact`} className="hover:text-slate-900">
+            {isEN ? "Contact" : "Contact"}
+          </Link>
         </nav>
+
+        {/* SWITCH LANGUE */}
+        <div className="text-sm">
+          {isEN ? (
+            <Link href={pathname.replace("/en", "") || "/"} className="hover:underline">
+              FR
+            </Link>
+          ) : (
+            <Link href={`/en${pathname}`} className="hover:underline">
+              EN
+            </Link>
+          )}
+        </div>
 
       </div>
     </header>

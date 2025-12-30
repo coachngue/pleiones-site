@@ -4,57 +4,61 @@ export default function ServicesEN() {
 
       {/* HERO */}
       <section className="bg-gradient-to-r from-slate-800 to-slate-700 text-white">
-        <div className="max-w-5xl mx-auto px-6 py-20 text-center">
-          <h1 className="text-4xl font-bold mb-4">
+        <div className="max-w-5xl mx-auto px-6 py-24 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
             Our Services
           </h1>
-          <p className="text-lg text-slate-200">
-            Project Management • Agile Transformation • ERP • Coaching
+          <p className="text-lg md:text-xl text-slate-200">
+            Complex project management, digital transformation & PMI certifications
           </p>
         </div>
       </section>
 
       {/* SERVICES */}
       <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+        <div className="max-w-5xl mx-auto px-6 space-y-16">
 
-          <div className="p-8 border rounded-2xl shadow-sm">
+          <div>
             <h2 className="text-2xl font-bold mb-4">
               Complex Project Management
             </h2>
-            <p className="text-slate-700">
-              Governance, structuring, and execution of complex and
-              multi-stakeholder projects aligned with PMI® standards.
+            <p className="text-lg text-slate-700 leading-relaxed">
+              We support organizations in structuring, governing, and delivering
+              complex, high-stakes projects involving multiple stakeholders,
+              significant budgets, and strategic transformation.
             </p>
           </div>
 
-          <div className="p-8 border rounded-2xl shadow-sm">
+          <div>
             <h2 className="text-2xl font-bold mb-4">
-              Agile & Digital Transformation
+              Agile & PMI® Standards Implementation
             </h2>
-            <p className="text-slate-700">
-              Agile adoption, Scrum & PMI-ACP® coaching, organizational
-              transformation, and delivery optimization.
+            <p className="text-lg text-slate-700 leading-relaxed">
+              Deployment of PMI® frameworks (PMBOK®, Agile Practice Guide),
+              PMO setup, Agile transformation, and coaching of project managers
+              and leadership teams.
             </p>
           </div>
 
-          <div className="p-8 border rounded-2xl shadow-sm">
+          <div>
             <h2 className="text-2xl font-bold mb-4">
-              ERP & Information Systems
+              ERP & Digital Transformation
             </h2>
-            <p className="text-slate-700">
-              ERP selection, implementation, and governance (Sage, Odoo, SAP),
-              aligned with business strategy.
+            <p className="text-lg text-slate-700 leading-relaxed">
+              Strategic support for ERP integration (Sage, Odoo, SAP),
+              process digitalization, governance alignment, and change management
+              adapted to African contexts.
             </p>
           </div>
 
-          <div className="p-8 border rounded-2xl shadow-sm">
+          <div>
             <h2 className="text-2xl font-bold mb-4">
-              Coaching & Certification
+              International Certification Coaching
             </h2>
-            <p className="text-slate-700">
-              PMP®, PMI-ACP® preparation, executive coaching, PMO setup,
-              and capability building for project leaders.
+            <p className="text-lg text-slate-700 leading-relaxed">
+              High-level preparation and coaching for PMP®, PMI-ACP® and Agile
+              certifications, combining international standards with real-world
+              project experience.
             </p>
           </div>
 
@@ -62,19 +66,20 @@ export default function ServicesEN() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-slate-900 text-white text-center">
+      <section className="py-24 bg-gradient-to-r from-slate-800 to-slate-900 text-white text-center">
         <h2 className="text-3xl font-bold mb-6">
           Let’s work together
         </h2>
-        <p className="text-lg text-slate-300 mb-10">
-          Discuss your project challenges and transformation goals.
+
+        <p className="mb-10 text-lg text-slate-200">
+          Contact us to discuss your project challenges or certification goals.
         </p>
 
         <a
           href="https://wa.me/2250758881907"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex bg-white text-slate-900 font-semibold px-10 py-4 rounded-2xl hover:scale-105 transition"
+          className="inline-flex items-center justify-center bg-white text-slate-800 font-semibold px-10 py-4 rounded-2xl shadow-lg hover:scale-105 transition"
         >
           Contact PLEIONES AFRICA
         </a>
