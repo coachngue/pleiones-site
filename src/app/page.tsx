@@ -1,13 +1,23 @@
+"use client";
+
+import Script from "next/script";
+
 export default function Home() {
   return (
     <main className="bg-slate-50 text-slate-900 font-sans">
+
+      {/* Script Credly (UNE SEULE FOIS) */}
+      <Script
+        src="https://cdn.credly.com/assets/utilities/embed.js"
+        strategy="afterInteractive"
+      />
 
       {/* HERO */}
       <section className="bg-gradient-to-r from-slate-800 to-slate-700 text-white">
         <div className="max-w-6xl mx-auto px-6 py-28 text-center">
           <img
             src="/pleiones-logo.png"
-            alt="PLEIONES"
+            alt="PLEIONES AFRICA"
             className="h-20 md:h-24 mx-auto mb-8 object-contain"
           />
 
@@ -16,7 +26,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl mb-10 text-slate-200">
-            Formations et accompagnement aux certifications PMI®
+            Formations et accompagnement aux certifications internationales PMI®
           </p>
 
           <a
@@ -32,60 +42,62 @@ export default function Home() {
       </section>
 
       {/* BADGES CERTIFICATIONS */}
-      <section className="bg-white py-14">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm uppercase tracking-widest text-slate-500 mb-8">
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-10">
             Certifications internationales reconnues
-          </p>
+          </h2>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-12">
-            <div className="flex flex-col items-center">
-              <img
-                src="/badges/pmp.png"
-                alt="PMP® – Project Management Professional"
-                className="h-40 w-auto"
-              />
-              <p className="mt-4 font-semibold text-slate-700">
-                PMP® – Project Management Professional
-              </p>
-            </div>
+          <div className="flex flex-col md:flex-row justify-center gap-12 items-center">
 
-            <div className="flex flex-col items-center">
-              <img
-                src="/badges/pmi-acp.png"
-                alt="PMI-ACP® – Agile Certified Practitioner"
-                className="h-40 w-auto"
-              />
-              <p className="mt-4 font-semibold text-slate-700">
-                PMI-ACP® – Agile Certified Practitioner
-              </p>
-            </div>
+            {/* PMP */}
+            <div
+              data-iframe-width="150"
+              data-iframe-height="270"
+              data-share-badge-id="b9398df3-949d-466b-9764-da8a571bc4f6"
+              data-share-badge-host="https://www.credly.com"
+            ></div>
+
+            {/* PMI-ACP */}
+            <div
+              data-iframe-width="150"
+              data-iframe-height="270"
+              data-share-badge-id="389ce8a0-9879-4bdf-9d0f-96edfd5e03b7"
+              data-share-badge-host="https://www.credly.com"
+            ></div>
+
           </div>
+
+          <p className="mt-8 text-slate-600 text-lg">
+            Certifications délivrées par le <strong>Project Management Institute (PMI®)</strong>
+          </p>
         </div>
       </section>
 
-      {/* SEPARATEUR */}
-      <div className="h-16 bg-gradient-to-b from-white to-slate-100"></div>
-
       {/* A PROPOS */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-6">À propos de PLEIONES</h2>
+            <h2 className="text-3xl font-bold mb-6">
+              À propos de PLEIONES AFRICA
+            </h2>
             <p className="leading-relaxed text-slate-700 text-lg">
-              PLEIONES est un cabinet spécialisé en management de projets IT,
-              digitalisation et accompagnement aux certifications internationales
-              (PMP®, PMI-ACP®, Agile & Scrum), avec plus de 20 ans d’expérience
-              en Afrique de l’Ouest.
+              PLEIONES AFRICA est un cabinet de conseil spécialisé en management
+              de projets complexes, transformation digitale et accompagnement
+              aux certifications internationales PMI®.
+              <br /><br />
+              Nous accompagnons entreprises, institutions et dirigeants en
+              Afrique de l’Ouest, avec une approche pragmatique, mesurable
+              et alignée sur les standards internationaux.
             </p>
           </div>
 
-          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-10 shadow-sm">
+          <div className="bg-white rounded-2xl border border-slate-200 p-10 shadow-sm">
             <ul className="space-y-4 text-lg">
-              <li>✔️ +20 ans d’expérience projets IT</li>
+              <li>✔️ +20 ans d’expérience en projets IT</li>
               <li>✔️ Projets complexes & ERP (Sage, Odoo, SAP)</li>
-              <li>✔️ Budgets gérés jusqu’à plusieurs centaines de milliers d’euros</li>
-              <li>✔️ Coaching & formations certifiantes PMI®</li>
+              <li>✔️ Budgets multi-millions & gouvernance stratégique</li>
+              <li>✔️ Coaching exécutif & formations certifiantes PMI®</li>
             </ul>
           </div>
         </div>
@@ -101,8 +113,8 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-6">
             {[
               "Expertise terrain",
-              "Standards internationaux PMI®",
-              "Contexte africain maîtrisé",
+              "Standards internationaux",
+              "Contexte africain",
               "Résultats mesurables",
             ].map((item) => (
               <div
@@ -147,7 +159,7 @@ export default function Home() {
                 Gouvernance & PMO
               </h3>
               <p className="text-slate-700">
-                Pilotage, méthodes Agile & hybrides
+                Pilotage stratégique, méthodes hybrides & Agile
               </p>
             </div>
           </div>
@@ -175,13 +187,13 @@ export default function Home() {
         </a>
       </section>
 
-      {/* SEO TEXTE */}
+      {/* SEO INVISIBLE */}
       <section className="hidden">
         <h2>Cabinet de management de projets complexes en Afrique</h2>
         <p>
-          PLEIONES est un cabinet de conseil spécialisé en management de projets
-          complexes, transformation digitale, ERP et accompagnement aux
-          certifications internationales PMI (PMP®, PMI-ACP®, Agile & Scrum).
+          PLEIONES AFRICA est un cabinet de conseil spécialisé en management
+          de projets complexes, transformation digitale, ERP et certifications
+          internationales PMI (PMP®, PMI-ACP®, Agile & Scrum).
         </p>
       </section>
 
