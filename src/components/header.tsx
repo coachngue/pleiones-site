@@ -6,8 +6,14 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const pathname = usePathname();
   const isEN = pathname.startsWith("/en");
-
   const base = isEN ? "/en" : "";
+
+  const navItems = [
+    { href: "/", labelFR: "Accueil", labelEN: "Home" },
+    { href: "/profil-coach", labelFR: "Profil du coach", labelEN: "Coach Profile" },
+    { href: "/services", labelFR: "Services", labelEN: "Services" },
+    { href: "/contact", labelFR: "Contact", labelEN: "Contact" },
+  ];
 
   return (
     <header className="bg-white border-b">
@@ -19,26 +25,26 @@ export default function Header() {
         </Link>
 
         {/* NAVIGATION */}
-        <nav className="flex gap-6 text-slate-700 font-medium">
-          <Link href={`${base}/`} className="hover:text-slate-900">
-            {isEN ? "Home" : "Accueil"}
-          </Link>
+        <nav className="flex items-center text-slate-700 font-medium">
+          {navItems.map((item, index) => (
+            <div key={item.href} className="flex items-center">
+              <Link
+                href={`${base}${item.href}`}
+                className="hover:text-slate-900 transition"
+              >
+                {isEN ? item.labelEN : item.labelFR}
+              </Link>
 
-          <Link href={`${base}/profil-coach`} className="hover:text-slate-900">
-            {isEN ? "Coach Profile" : "Profil du coach"}
-          </Link>
-
-          <Link href={`${base}/services`} className="hover:text-slate-900">
-            {isEN ? "Services" : "Services"}
-          </Link>
-
-          <Link href={`${base}/contact`} className="hover:text-slate-900">
-            {isEN ? "Contact" : "Contact"}
-          </Link>
+              {/* Separator */}
+              {index < navItems.length - 1 && (
+                <span className="mx-3 text-slate-400">•</span>
+              )}
+            </div>
+          ))}
         </nav>
 
         {/* SWITCH LANGUE */}
-        <div className="text-sm">
+        <div className="text-sm font-medium">
           {isEN ? (
             <Link href={pathname.replace("/en", "") || "/"} className="hover:underline">
               FR
