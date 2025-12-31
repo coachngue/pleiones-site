@@ -1,17 +1,9 @@
-import type { ReactNode } from "react";
-
-export const metadata = {
-  title: "PLEIONES – Project Management & Agile Expertise in Africa",
-  description:
-    "PLEIONES supports organizations and professionals in complex project management, digital transformation, and PMI certifications across Africa.",
-};
+import { ReactNode } from "react";
 
 export default function EnLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className="bg-slate-50 text-slate-900 font-sans">
-        {children}
-      </body>
-    </html>
+    <div lang="en" className="flex flex-col min-h-screen">
+      {children}
+    </div>
   );
 }

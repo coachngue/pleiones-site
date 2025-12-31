@@ -1,120 +1,131 @@
-export default function HomeEN() {
+import Link from "next/link";
+
+export default function EnHomePage() {
   return (
-    <main className="bg-slate-50 text-slate-900 font-sans">
+    <main className="flex flex-col">
 
       {/* HERO */}
-      <section className="bg-gradient-to-r from-slate-800 to-slate-700 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-28 text-center">
-          <img
-            src="/pleiones-logo.png"
-            alt="PLEIONES"
-            className="h-20 md:h-24 mx-auto mb-8 object-contain"
-          />
-
-          <h1 className="text-3xl md:text-4xl font-semibold mb-6">
-            Complex Project Management • Agile • ERP
+      <section className="bg-slate-900 text-white py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            PLEIONES AFRICA
           </h1>
-
-          <p className="text-lg md:text-xl mb-10 text-slate-200">
-            Training & coaching for PMI® certifications
+          <p className="text-lg md:text-xl max-w-3xl mx-auto">
+            Consulting firm specialized in complex project management,
+            digital transformation and international PMI certifications
           </p>
-
-          <a
-            href="https://wa.me/2250758881907"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-white text-slate-800 font-semibold px-10 py-4 rounded-2xl shadow-lg
-                       hover:scale-105 hover:bg-slate-100 transition-transform duration-300"
-          >
-            Contact via WhatsApp
-          </a>
+          <p className="mt-4 text-slate-300">
+            International expertise, African realities
+          </p>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-6">About PLEIONES</h2>
-            <p className="leading-relaxed text-slate-700 text-lg">
-              PLEIONES is a consulting firm specialized in complex IT project
-              management, digital transformation and international certifications
-              coaching (PMP®, PMI-ACP®, Agile & Scrum), with over 20 years of
-              experience in West Africa.
+      {/* INTRO */}
+      <section className="bg-white py-16">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-slate-700 text-lg leading-relaxed">
+            PLEIONES AFRICA supports executives, project managers,
+            organizations and institutions in mastering complex projects,
+            strengthening governance, and achieving sustainable performance
+            aligned with international standards.
+          </p>
+        </div>
+      </section>
+
+      {/* KEY FIGURES */}
+      <section className="bg-slate-50 py-16">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+          <div className="bg-white border rounded-2xl p-6 shadow-sm">
+            <p className="text-3xl font-bold text-slate-800">100+</p>
+            <p className="text-slate-600 mt-2">
+              Trainings & coaching sessions
             </p>
           </div>
 
-          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-10 shadow-sm">
-            <ul className="space-y-4 text-lg">
-              <li>✔️ 20+ years of IT project experience</li>
-              <li>✔️ Complex projects & ERP (Sage, Odoo, SAP)</li>
-              <li>✔️ PMP® & PMI-ACP® certified coach</li>
-              <li>✔️ Budgets managed up to multi-million USD</li>
-            </ul>
+          <div className="bg-white border rounded-2xl p-6 shadow-sm">
+            <p className="text-3xl font-bold text-slate-800">$1M+</p>
+            <p className="text-slate-600 mt-2">
+              Project budgets delivered
+            </p>
           </div>
+
+          <div className="bg-white border rounded-2xl p-6 shadow-sm">
+            <p className="text-3xl font-bold text-slate-800">20+</p>
+            <p className="text-slate-600 mt-2">
+              Years of experience
+            </p>
+          </div>
+
+          <div className="bg-white border rounded-2xl p-6 shadow-sm">
+            <p className="text-3xl font-bold text-slate-800">PMI®</p>
+            <p className="text-slate-600 mt-2">
+              PMP® & PMI-ACP® certified
+            </p>
+          </div>
+
         </div>
       </section>
 
-      {/* WHY US */}
-      <section className="py-24 bg-slate-100">
+      {/* CORE SERVICES */}
+      <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-14">
-            Why choose us?
-          </h2>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              "Field expertise",
-              "International standards",
-              "African context mastery",
-              "Measurable results",
-            ].map((item) => (
-              <div
-                key={item}
-                className="bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition"
-              >
-                <p className="font-semibold text-lg">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-14">
-            Our services
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Our Core Services
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="border border-slate-200 rounded-2xl p-8 hover:shadow-md transition">
-              <h3 className="font-semibold text-xl mb-3">
-                Training & Certification
+
+            <div className="border rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-3">
+                Project Governance
               </h3>
-              <p className="text-slate-700">
-                PMP®, PMI-ACP®, Agile & Scrum
+              <p className="text-slate-600">
+                Structuring PMOs, aligning strategy, governance frameworks
+                and performance measurement based on PMI® standards.
               </p>
             </div>
 
-            <div className="border border-slate-200 rounded-2xl p-8 hover:shadow-md transition">
-              <h3 className="font-semibold text-xl mb-3">
-                Digital Transformation & IT Projects
+            <div className="border rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-3">
+                Agile & Transformation
               </h3>
-              <p className="text-slate-700">
-                ERP, digitalization, complex programs
+              <p className="text-slate-600">
+                Agile transformation, Scrum and hybrid models adapted
+                to complex environments and African contexts.
               </p>
             </div>
 
-            <div className="border border-slate-200 rounded-2xl p-8 hover:shadow-md transition">
-              <h3 className="font-semibold text-xl mb-3">
-                Governance & PMO
+            <div className="border rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-3">
+                Coaching & Certifications
               </h3>
-              <p className="text-slate-700">
-                Project governance, Agile & hybrid methods
+              <p className="text-slate-600">
+                PMP®, PMI-ACP®, leadership coaching and capability
+                development for professionals and teams.
               </p>
             </div>
+
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-slate-900 text-white py-16">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Let’s discuss your challenges
+          </h2>
+          <p className="text-slate-300 mb-8">
+            Contact us to explore governance, transformation
+            or professional certification pathways.
+          </p>
+          <Link
+            href="/en/contact"
+            className="inline-block bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-slate-200 transition"
+          >
+            Contact PLEIONES AFRICA
+          </Link>
         </div>
       </section>
 
