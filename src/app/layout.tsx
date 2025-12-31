@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import NetlifyForms from "./netlify-forms";
 
 export const metadata: Metadata = {
   title: "PLEIONES AFRICA | Management de projets complexes",
@@ -25,6 +26,9 @@ export default function RootLayout({
 
         {/* Footer global */}
         <Footer />
+        <NetlifyForms />
+
+
       </body>
     </html>
   );
