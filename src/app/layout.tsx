@@ -17,16 +17,18 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans">
+        
         {/* Header global */}
         <Header />
 
-        {/* Contenu des pages */}
+        {/* Contenu principal */}
         <main className="flex-grow">
           {children}
         </main>
 
         {/* Footer global */}
         <Footer />
+
       </body>
     </html>
   );
