@@ -35,12 +35,11 @@ export default function DemandeMission() {
           <form
             name="demande-mission"
             method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
+           
+           
             className="bg-white p-8 rounded-2xl shadow space-y-6"
           >
-            <input type="hidden" name="form-name" value="demande-mission" />
-            <input type="hidden" name="bot-field" />
+            ame" value="demande-mission" /
 
             <h2 className="text-2xl font-bold mb-4">
               Informations sur la mission
