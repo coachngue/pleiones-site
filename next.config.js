@@ -1,11 +1,36 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  output: 'standalone', // pour Netlify / serverless
-  typescript: { ignoreBuildErrors: false },
-  eslint: { ignoreDuringBuilds: true },
-  experimental: {} // pas de turbo ou appDir ici
-};
+  // Active le dossier app/ pour le nouveau router
+  experimental: {
+    appDir: true,
+  },
 
-module.exports = nextConfig;
+  // Sortie standalone pour Netlify (SSR et génération hybride)
+  output: "standalone",
+
+  // Réécritures ou redirections si nécessaire
+  async redirects() {
+    return [
+      {
+        source: '/_not-trouvé', // rediriger si tu veux
+        destination: '/',
+        permanent: false,
+      },
+    ]
+  },
+
+  // Optionnel : headers pour sécurité ou CORS
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+        ],
+      },
+    ]
+  },
+}
+
+module.exports = nextConfig
