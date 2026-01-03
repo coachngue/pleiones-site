@@ -1,33 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext", // Code moderne
     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ], // Librairies disponibles
+    "allowJs": true, // Permet les fichiers JS
+    "skipLibCheck": true, // Ignore les types dans node_modules
+    "strict": true, // Mode strict TypeScript
+    "forceConsistentCasingInFileNames": true, // Respect des majuscules/minuscules
+    "noEmit": true, // Pas de build TS séparé, Next.js gère le JS
+    "esModuleInterop": true, // Compatibilité CommonJS / ESModules
+    "module": "ESNext", // Module moderne pour Next.js
+    "moduleResolution": "NodeNext", // Résolution moderne des modules
+    "resolveJsonModule": true, // Permet l'import de fichiers JSON
+    "isolatedModules": true, // Nécessaire pour Next.js
+    "jsx": "react-jsx", // JSX préservé pour Next.js 13
+    "incremental": true, // Build incrémental plus rapide
     "plugins": [
       {
         "name": "next"
-      }
+      } // Plugin TypeScript Next.js
     ]
   },
   "include": [
