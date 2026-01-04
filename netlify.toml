@@ -1,11 +1,9 @@
-# netlify.toml - configuration prête pour Next.js 16 + Node 24.12
-
 [build]
-  # Commande pour compiler ton projet
   command = "npm run build"
-  # Dossier à publier sur Netlify
   publish = ".next"
 
 [build.environment]
-  # Version Node à utiliser
-  NODE_VERSION = "24.12"
+  NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
